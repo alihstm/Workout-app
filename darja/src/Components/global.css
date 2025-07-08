@@ -1,9 +1,22 @@
 :root {
-  --text-gray-700: #364153;
+  --gray-700: #364153;
+  --gray-300: #d1d5dc 
+  --blue-900: #1c398e;
+  --white: white;
 }
 
-.color-gray {
-  color: var(--text-gray-700);
+.color-gray-700 {
+  color: var(--gray-700);
+}
+.color-white {
+  color: var(--white);
+}
+
+.bg-blue-900 {
+  background-color: var(--blue-900);
+}
+.bg-gray-300 {
+  background-color: var(--gray-300);
 }
 
 .fade-in {

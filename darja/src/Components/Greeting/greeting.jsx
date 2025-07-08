@@ -11,7 +11,7 @@ export default function Greeting() {
   const handleClick = () => {
     setShowTitle(true);
     setTimeout(() => {
-      navigate("/gender");
+      navigate("/goalop");
     }, 2500);
   };
 
@@ -25,24 +25,29 @@ export default function Greeting() {
             className="w-40 sm:w-48 md:w-60 rounded-full shadow-lg"
           />
           <h1 className="text-3xl md:text-4xl font-bold text-center">سلام!</h1>
-          <p className="text-base sm:text-lg font-medium text-center leading-relaxed color-gray">
+          <p className="text-base sm:text-lg font-medium text-center leading-relaxed color-gray-700">
             من مربی شخصی‌ت هستم. <br />
             برای اینکه یه برنامه مخصوص خودت بچینم، چندتا سؤال دارم.
           </p>
         </div>
 
-        {!showTitle ? (
-          <button
-            onClick={handleClick}
-            className="bg-black text-white py-3 px-10 rounded-xl shadow-md hover:bg-gray-800 transition duration-150 hover:scale-105 active:scale-95"
-          >
-            بزن بریم
-          </button>
-        ) : (
-          <h2 className="text-4xl font-bold text-center text-black animate-app-title">
-            درجا
-          </h2>
-        )}
+        <div className="flex flex-col items-center gap-3">
+          {!showTitle ? (
+            <button
+              onClick={handleClick}
+              className="bg-black text-white py-3 px-10 rounded-xl shadow-md hover:bg-gray-800 hover:cursor-pointer transition duration-150 hover:scale-105 active:scale-95"
+            >
+              بزن بریم
+            </button>
+          ) : (
+            <h2 className="text-4xl font-bold text-center text-black animate-app-title">
+              درجا
+            </h2>
+          )}
+          <p className="text-base sm:text-lg font-light text-center leading-relaxed color-gray-700">
+            تو فقط شروع کن، بقیه‌ش با منه!
+          </p>
+        </div>
       </div>
     </main>
   );
